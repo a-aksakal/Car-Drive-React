@@ -1,0 +1,26 @@
+.car-group{
+    
+    position: absolute;
+    display: flex;
+    justify-content: flex-start;
+    
+    
+}
+
+.car-image {
+    
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 20px;
+    
+}
+.car-speed {
+    
+    padding-top: 40px;
+    font-weight: 800;
+    transform-origin: 10px 15px;
+    text-shadow: 1px 1px 1px #CECCC2;
+
+    
+}
