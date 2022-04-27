@@ -21,10 +21,11 @@ function HomePage() {
     setCarPositionAndSpeed,
   } = useContext(CarDetailContext);
   const CarPosition = {
+    orientation: rotate,
     x: positionX,
     y: positionY,
-    orientation: rotate,
   };
+
   useEffect(() => {
     backend.getInitialCarPositionAndSpeed();
   }, []);
@@ -42,7 +43,7 @@ function HomePage() {
       setSpeedLevel(detail.speedLevel);
     };
 
-    let divScroll = document.querySelector("#console-group");
+    const divScroll = document.querySelector("#console-group");
     divScroll.scrollTop = divScroll.scrollHeight - divScroll.clientHeight;
 
     document.addEventListener("carPositionAndSpeedChanged", carDetailHandler);

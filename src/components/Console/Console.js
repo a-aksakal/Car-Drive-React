@@ -3,6 +3,7 @@ import CarDetailContext from "../../store/CarDetailContext";
 import "./Console.css";
 function Console() {
   const { carPositionAndSpeed } = useContext(CarDetailContext);
+
   return (
     <>
       {carPositionAndSpeed &&
