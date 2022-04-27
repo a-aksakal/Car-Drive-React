@@ -164,8 +164,5 @@ interface SpeedLevelChangedEvent {
 }
 ```
 
----
 
-Projeyi tamamladıktan sonra kendinize ait public bir repository'e yükleyip, adresini bize gönderebilirsiniz.
 
-Sağlıklı ve güzel günler geçirmeniz dileğiyle...
