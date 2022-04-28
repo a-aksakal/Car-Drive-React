@@ -1,6 +1,6 @@
 # Merhaba
 
-Uygulamada **HomePage.js** sayfası üzerinde açılmaktadır. Bu sayfada `600x600` boyutlarında harita ve bu harita üzerinde konumlanan araç anlık olarak backend tarafından gelen bilgiler doğrultusunda hareketini sağlamakta ve gelen bilgiler sağ tarafta konsolda listelenmektedir.
+Uygulamada `**HomePage.js**` sayfası üzerinde açılmaktadır. Bu sayfada `600x600` boyutlarında harita ve bu harita üzerinde konumlanan araç anlık olarak backend tarafından gelen bilgiler doğrultusunda hareketini sağlamakta ve gelen bilgiler sağ tarafta konsolda listelenmektedir.
 
 Araç hareketine başladıktan sonra kavşağa geldiğinde dönüş hareketine başlarken araç başa dönüyordu. Araç bilgileri `constants.ts` dosyasından geliyor. O dosyayı kontrol ettiğimde gelen son araç bilgisinin tam işaret ettiğim noktada bittiğini farkettim. Bu yüzden [Örnek](https://streamable.com/u1uol9) gibi olması için constants.ts dosyasına araç hareketini tamamlayacak şekilde verileri dahil ettim.
 
