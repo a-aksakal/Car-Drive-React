@@ -14,19 +14,24 @@ Araç hareketine başladıktan sonra kavşağa geldiğinde dönüş hareketine b
 
 - Uygulamanın çalıştığı her saniye tarayıcının kaynak tüketimi oldukça artıyordu. Bunun sebebi `carPositionAndSpeedChanged` eventinden gelen bilgilerin `CarPositionAndSpeed` state dizisine kaydedilip ve bu dizinin Consol componentinde map methoduyla her bir elemanın sayfada listelenmesinden kaynaklanıyordu. Oluşan bu memory leak durumunu engellemek için araç hareketini her tamamladığında konsoldaki bilgileri sıfırladım. Bunu da Consol componentinde eventi dinlerken if else karar yapısıyla aracın x ve y bilgisini kontrol ederek yönettim.
 
-  - ```javascript
-    const carDetailHandler = ({ detail }) => {
-      setPositionX(detail.carPosition.x);
-      setPositionY(detail.carPosition.y);
-      setRotate(detail.carPosition.orientation);
-      setSpeed(detail.speed);
-      if (detail.carPosition.x === 285 && detail.carPosition.y === 415) {
-        setCarPositionAndSpeed([]);
-      } else {
-        setCarPositionAndSpeed([...carPositionAndSpeed, detail]);
-      }
-    };
-    ```
+```javascript
+const carDetailHandler = ({ detail }) => {
+  setPositionX(detail.carPosition.x);
+
+  setPositionY(detail.carPosition.y);
+
+  setRotate(detail.carPosition.orientation);
+
+  setSpeed(detail.speed);
+
+  //Aracın hareketini tamamlayıp tamamlamadığını kontrol eden yapı
+  if (detail.carPosition.x === 285 && detail.carPosition.y === 415) {
+    setCarPositionAndSpeed([]);
+  } else {
+    setCarPositionAndSpeed([...carPositionAndSpeed, detail]);
+  }
+};
+```
 
 - **Car Componenti**, HomePage componentine import edilmiş olup, `carPositionAndSpeedChanged` eventinden gelen bilgiler doğrultusunda harita üzerinde hareket etmesi gerekiyordu. Bu yüzden contextAPI kullanılarak x,y ve orientation bilgileri state ile yönetilmiş olup her gelen posizyon bilgisinde bu durum statelere bağlanarak yönetilmiştir. Her state değişikliğinde Car componenti render olarak style kısmında left kısmına x, top kısmına y, rotate kısmına orientation değerleri eklenmektedir.
 
