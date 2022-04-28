@@ -16,7 +16,7 @@ Araç hareketine başladıktan sonra kavşağa geldiğinde dönüş hareketine b
 
 ## Render Performansı:
 
-- **HomePage componentinde** yerleşik olarak harita ve konsol kutusu bulunduğu için bu sayfanın sürekli render edilmesi maliyet açısından olumsuz olacaktı. Bu yüzden bu sayfa, uygulama çalışırken render edilmeyecek şekilde ayarlandı.
+- **HomePage componentinde** yerleşik olarak harita ve konsol kutusu bulunduğu için bu sayfanın sürekli render edilmesi maliyet açısından olumsuz olacaktı. Bu yüzden bu sayfa, uygulama çalışırken render edilmeyecek şekilde ayarlandı. Araç, konsol ve buton için componentler oluşturdum.
 
 - Bütün state değişiklikleri `Consol componenti` üzerinden yönetilmiştir. Car componentinde bu state değişikliklerinin yönetilmesinin render süresine olumsuz etkisi olacağını düşündüm ve react dev tools üzerinden profiler ile kontrol ettiğimde bu şekilde yapmayı tercih ettim.
 
@@ -46,6 +46,8 @@ const carDetailHandler = ({ detail }) => {
 ---
 
 - **Car Componenti**, HomePage componentine import edilmiş olup, `carPositionAndSpeedChanged` eventinden gelen bilgiler doğrultusunda harita üzerinde hareket etmesi gerekiyordu. Bu yüzden contextAPI kullanılarak x,y ve orientation bilgileri state ile yönetilmiş olup her gelen posizyon bilgisinde bu durum statelere bağlanarak yönetilmiştir. Her state değişikliğinde Car componenti render olarak style kısmında left kısmına x, top kısmına y, rotate kısmına orientation değerleri eklenmektedir.
+
+- **`Button componenti`** speedLevel değiştiğinde state kullanarak butondaki hız seviyesi güncellendi.  
 
 ---
 
