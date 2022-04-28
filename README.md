@@ -14,7 +14,7 @@ Araç hareketine başladıktan sonra kavşağa geldiğinde dönüş hareketine b
 
 - Uygulamanın çalıştığı her saniye tarayıcının kaynak tüketimi oldukça artıyordu. Bunun sebebi `carPositionAndSpeedChanged` eventinden gelen bilgilerin `CarPositionAndSpeed` state dizisine kaydedilip ve bu dizinin Consol componentinde map methoduyla her bir elemanın sayfada listelenmesinden kaynaklanıyordu. Oluşan bu memory leak durumunu engellemek için araç hareketini her tamamladığında konsoldaki bilgileri sıfırladım. Bunu da Consol componentinde eventi dinlerken if else karar yapısıyla aracın x ve y bilgisini kontrol ederek yönettim.
 
---
+---
 
 ```javascript
 const carDetailHandler = ({ detail }) => {
@@ -35,7 +35,7 @@ const carDetailHandler = ({ detail }) => {
 };
 ```
 
---
+---
 
 - **Car Componenti**, HomePage componentine import edilmiş olup, `carPositionAndSpeedChanged` eventinden gelen bilgiler doğrultusunda harita üzerinde hareket etmesi gerekiyordu. Bu yüzden contextAPI kullanılarak x,y ve orientation bilgileri state ile yönetilmiş olup her gelen posizyon bilgisinde bu durum statelere bağlanarak yönetilmiştir. Her state değişikliğinde Car componenti render olarak style kısmında left kısmına x, top kısmına y, rotate kısmına orientation değerleri eklenmektedir.
 
