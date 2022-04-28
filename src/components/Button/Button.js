@@ -1,5 +1,6 @@
 import React, { useContext } from "react";
 import CarDetailContext from "../../store/CarDetailContext";
+import "./Button.css";
 
 function Button(props) {
   const { speedChange } = props;
