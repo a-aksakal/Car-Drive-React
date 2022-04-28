@@ -1,10 +1,18 @@
 # Merhaba
 
-> Uygulamada **HomePage.js** sayfası üzerinde açılmaktadır. Bu sayfada `600x600` boyutlarında harita ve bu harita üzerinde konumlanan araç anlık olarak backend tarafından gelen bilgiler doğrultusunda hareketini sağlamakta ve gelen bilgiler sağ tarafta konsolda listelenmektedir.
+Uygulamada **HomePage.js** sayfası üzerinde açılmaktadır. Bu sayfada `600x600` boyutlarında harita ve bu harita üzerinde konumlanan araç anlık olarak backend tarafından gelen bilgiler doğrultusunda hareketini sağlamakta ve gelen bilgiler sağ tarafta konsolda listelenmektedir.
 
-> Araç hareketine başladıktan sonra kavşağa geldiğinde dönüş hareketine başlarken araç başa dönüyordu. Araç bilgileri `constants.ts` dosyasından geliyor. O dosyayı kontrol ettiğimde gelen son araç bilgisinin tam işaret ettiğim noktada bittiğini farkettim. Bu yüzden [Örnek](https://streamable.com/u1uol9) gibi olması için constants.ts dosyasına araç hareketini tamamlayacak şekilde verileri dahil ettim.
+Araç hareketine başladıktan sonra kavşağa geldiğinde dönüş hareketine başlarken araç başa dönüyordu. Araç bilgileri `constants.ts` dosyasından geliyor. O dosyayı kontrol ettiğimde gelen son araç bilgisinin tam işaret ettiğim noktada bittiğini farkettim. Bu yüzden [Örnek](https://streamable.com/u1uol9) gibi olması için constants.ts dosyasına araç hareketini tamamlayacak şekilde verileri dahil ettim.
 
 ---
+
+## Kullanılan İsteriler:
+
+    - **React18** kurallarına uygun hazırlandı,
+    - Hook yapısı kullanıldı,
+    - ContextAPI kullanıldı,
+    - Eslint (Airbnb kurallarına göre) kullanıldı. Ayrıca prettier ile konfigürasyonu yapıldı,
+    - Componentler parça ve dosyalara bölündü,
 
 ## Render Performansı:
 
@@ -45,13 +53,13 @@ const carDetailHandler = ({ detail }) => {
 
 ---
 
-### Assets Klasörü
+### Assets Klasörü:
 
 - Bu klasörün içinde img klasörü altında yollar ve araç görselleri bulunmaktadır.
 
 ---
 
-### Components Klasörü
+### Components Klasörü:
 
 - Bu klasörde her bir component kendi arasında klasörlenmiş olup her bir klasörün içinde ilgili componente ait `.js` dosyası ve `.css` dosyası bulunmaktadır.
 
@@ -63,12 +71,12 @@ const carDetailHandler = ({ detail }) => {
 
 ---
 
-### Pages Klasörü
+### Pages Klasörü:
 
 - Kullanılacak olan sayfaları belirtmek için bu klasör oluşturulmuştur. Her bir klasörün içinde ilgili sayfanın `.js` dosyası ve `.css` dosyası vardır.
 
 ---
 
-### Store Klasörü
+### Store Klasörü:
 
 - **ContextAPI** componentleri bu klasör altında toplanmıştır.
