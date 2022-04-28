@@ -1,21 +1,27 @@
-import React from "react";
+import React, { useContext } from "react";
 import CarImage from "../../assets/img/araba.svg";
+import CarDetailContext from "../../store/CarDetailContext";
 import "./Car.css";
-function Car(props) {
-  const { x, y, orientation } = props.Position;
+
+function Car() {
+  const { positionX, positionY, rotate, speed } = useContext(CarDetailContext);
+  const CarPosition = {
+    orientation: rotate,
+    x: positionX,
+    y: positionY,
+  };
 
   return (
-    <>
-      <div className="car-group" style={{ left: x, top: y }}>
-        <img
-          style={{ transform: `rotate(${orientation}deg)` }}
-          className="car-image"
-          src={CarImage}
-          alt="car"
-        ></img>
-        <span className="car-speed">{props.Speed} km/h</span>
-      </div>
-    </>
+    // eslint-disable-next-line prettier/prettier
+    <div className="car-group" style={{ left: CarPosition.x, top: CarPosition.y }}>
+      <img
+        style={{ transform: `rotate(${CarPosition.orientation}deg)` }}
+        className="car-image"
+        src={CarImage}
+        alt="car"
+      />
+      <span className="car-speed">{speed} km/h</span>
+    </div>
   );
 }
 
