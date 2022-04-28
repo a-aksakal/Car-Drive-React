@@ -8,11 +8,11 @@ Araç hareketine başladıktan sonra kavşağa geldiğinde dönüş hareketine b
 
 ## Kullanılan İsteriler:
 
-    - **React18** kurallarına uygun hazırlandı,
-    - Hook yapısı kullanıldı,
-    - ContextAPI kullanıldı,
-    - Eslint (Airbnb kurallarına göre) kullanıldı. Ayrıca prettier ile konfigürasyonu yapıldı,
-    - Componentler parça ve dosyalara bölündü,
+- **React18** kurallarına uygun hazırlandı,
+- Hook yapısı kullanıldı,
+- ContextAPI kullanıldı,
+- Eslint (Airbnb kurallarına göre) kullanıldı. Ayrıca prettier ile konfigürasyonu yapıldı,
+- Componentler parça ve dosyalara bölündü,
 
 ## Render Performansı:
 
