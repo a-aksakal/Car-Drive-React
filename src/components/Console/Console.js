@@ -20,9 +20,15 @@ function Console() {
       setPositionY(detail.carPosition.y);
       setRotate(detail.carPosition.orientation);
       setSpeed(detail.speed);
-      setCarPositionAndSpeed([...carPositionAndSpeed, detail]);
+      if (detail.carPosition.x === 285 && detail.carPosition.y === 415) {
+        setCarPositionAndSpeed([]);
+      } else {
+        setCarPositionAndSpeed([...carPositionAndSpeed, detail]);
+      }
     };
+
     document.addEventListener("carPositionAndSpeedChanged", carDetailHandler);
+
     const speedHandler = ({ detail }) => {
       setSpeedLevel(detail.speedLevel);
     };
