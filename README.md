@@ -20,7 +20,7 @@ Araç hareketine başladıktan sonra kavşağa geldiğinde dönüş hareketine b
 
 - Bütün state değişiklikleri `Consol componenti` üzerinden yönetilmiştir. Car componentinde bu state değişikliklerinin yönetilmesinin render süresine olumsuz etkisi olacağını düşündüm ve react dev tools üzerinden profiler ile kontrol ettiğimde bu şekilde yapmayı tercih ettim.
 
-- Uygulamanın çalıştığı her saniye tarayıcının kaynak tüketimi oldukça artıyordu. Bunun sebebi `carPositionAndSpeedChanged` eventinden gelen bilgilerin `CarPositionAndSpeed` state dizisine kaydedilip, zamanla dizinin eleman sayısının artıp bellekte yer kaplamasından kaynaklanıyordu. Oluşan bu memory leak durumunu engellemek için araç hareketini her tamamladığında konsoldaki bilgileri sıfırladım. Bunu da Consol componentinde eventi dinlerken if else karar yapısıyla aracın x ve y bilgisini kontrol ederek yönettim.
+- Uygulamanın çalıştığı her saniye tarayıcının kaynak tüketimi oldukça artıyordu. Bunun sebebi `carPositionAndSpeedChanged` eventinden gelen bilgilerin `CarPositionAndSpeed` state dizisine kaydedilip, zamanla dizinin eleman sayısının artıp bellekte yer kaplamasından kaynaklanıyordu. Oluşan bu memory leak durumunu engellemek için araç hareketini her tamamladığında ilgili diziyi sıfırladım. Bunu da Consol componentinde eventi dinlerken if else karar yapısıyla aracın x ve y bilgisini kontrol ederek yönettim.
 
 ---
 
