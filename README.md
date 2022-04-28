@@ -27,7 +27,11 @@ Uygulamada **HomePage.js** sayfası üzerinde açılmaktadır. Bu sayfada `600x6
 
 - Bu klasörde her bir component kendi arasında klasörlenmiş olup her bir klasörün içinde ilgili componente ait `.js` dosyası ve `.css` dosyası bulunmaktadır.
 
-  - Örn: `*components *Car *Car.js *Car.css`
+  - Örn:
+    - components
+      - Car
+        - Car.js
+        - Car.css
 
 ---
 
