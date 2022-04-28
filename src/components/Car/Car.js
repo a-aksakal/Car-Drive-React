@@ -12,8 +12,10 @@ function Car() {
   };
 
   return (
-    // eslint-disable-next-line prettier/prettier
-    <div className="car-group" style={{ left: CarPosition.x, top: CarPosition.y }}>
+    <div
+      className="car-group"
+      style={{ left: CarPosition.x, top: CarPosition.y }}
+    >
       <img
         style={{ transform: `rotate(${CarPosition.orientation}deg)` }}
         className="car-image"
