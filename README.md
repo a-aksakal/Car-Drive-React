@@ -19,24 +19,24 @@ Uygulamada **HomePage.js** sayfası üzerinde açılmaktadır. Bu sayfada `600x6
 
 ### Assets Klasörü
 
-Bu klasörün içinde img klasörü altında yollar ve araç görselleri bulunmaktadır.
+- Bu klasörün içinde img klasörü altında yollar ve araç görselleri bulunmaktadır.
 
 ---
 
 ### Components Klasörü
 
-Bu klasörde her bir component kendi arasında klasörlenmiş olup her bir klasörün içinde ilgili componente ait `.js` dosyası ve `.css` dosyası bulunmaktadır.
+- Bu klasörde her bir component kendi arasında klasörlenmiş olup her bir klasörün içinde ilgili componente ait `.js` dosyası ve `.css` dosyası bulunmaktadır.
 
-Örn: `*components *Car *Car.js *Car.css`
+  - Örn: `*components *Car *Car.js *Car.css`
 
 ---
 
 ### Pages Klasörü
 
-Kullanılacak olan sayfaları belirtmek için bu klasör oluşturulmuştur. Her bir klasörün içinde ilgili sayfanın `.js` dosyası ve `.css` dosyası vardır.
+- Kullanılacak olan sayfaları belirtmek için bu klasör oluşturulmuştur. Her bir klasörün içinde ilgili sayfanın `.js` dosyası ve `.css` dosyası vardır.
 
 ---
 
 ### Store Klasörü
 
-**ContextAPI** componentleri bu klasör altında toplanmıştır.
+- **ContextAPI** componentleri bu klasör altında toplanmıştır.
